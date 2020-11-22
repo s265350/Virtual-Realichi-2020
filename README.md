@@ -5,8 +5,11 @@
 Mantenere la gerarchia attuale delle cartelle:
 
 Blender: modelli e file .blend in generale
+
 References: immagini di riferimento
+
 Documents: Documenti in consegna o da consegnare
+
 Unity: cartella di progetto Unity
 
 Per aprire il progetto su Unity fare Open Project -> ADD -> Selezionate la folder 'Unity'
@@ -14,6 +17,7 @@ Per aprire il progetto su Unity fare Open Project -> ADD -> Selezionate la folde
 ## Comandi git utili
 
 **git config --global user.name** -> per configurare il proprio username
+
 **git config --global user.email** -> per configurare la propria password
 
 **git init** -> Inizializza un repo locale e si mette sul branch master
