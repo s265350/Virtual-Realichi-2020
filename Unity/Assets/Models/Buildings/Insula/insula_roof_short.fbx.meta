@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: a52ad3456d5477048a8ebf4d9d35cd4c
+guid: 2617450291ec1d045af6aaf6c1887648
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: glass_dirty
-    second: {fileID: 2100000, guid: 4467898bf4ff8bd40b9e109b8db3fb20, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: walls_out
-    second: {fileID: 2100000, guid: a8e3b506d84a03f41b65c46d887900fd, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
