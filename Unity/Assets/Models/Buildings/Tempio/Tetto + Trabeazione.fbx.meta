@@ -3,7 +3,12 @@ guid: f2e6e78f570000d489dbc21c177dca87
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tetto
+    second: {fileID: 2100000, guid: db1923dfb5f73034f97f89910085463b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

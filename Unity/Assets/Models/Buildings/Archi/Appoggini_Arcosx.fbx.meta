@@ -3,7 +3,12 @@ guid: 4d8128f38b2dfc74183bf1e992fff4dd
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arcosx_mat
+    second: {fileID: 2100000, guid: 756f78000b0b8a74ca9e78ad92d0fa1b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
