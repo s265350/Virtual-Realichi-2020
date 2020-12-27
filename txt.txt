@@ -1,0 +1,30 @@
+- personaggi
+	-Mercante (grembiule di cuoio)
+	-Nobile (tunica bella: decorazioni etc) 
+	-Schiavo (tunica iuta) 
+	-Soldati
+soldati, uomini, donne
+modello uomo:
+- Schiavo
+- Mercante
+- Nobile
+modello donna:
+- schiava
+- mercante
+- nobile
+modello soldato: ? 
+animali / cani 
+
+- dialoghi
+- informazioni
+- interazioni / animazioni
+- chiarire la fine: il personaggio nel foro prova a scappare dal foro verso la via iniziale. bisogna evitare i lapilli
+
+reazione NPC: (Francesco)
+- In base alla distanza 
+- In base al ruolo che si interpreta 
+
+Gestione Agenda (Alessia)
+
+terremoto: camera + polvericcio, alcuni elementi cadono (frutta) + spavento persone
+Animazione vesuvio
