@@ -78,7 +78,7 @@ Material:
     - _REFLECTIONS_WEIGHT: 1
     - _TRANSPARENCY: 0
     m_Colors:
-    - Color_22ED5232: {r: 8, g: 8, b: 8, a: 1}
+    - Color_22ED5232: {r: 15.999998, g: 15.999998, b: 15.999998, a: 1}
     - Color_917FA112: {r: 7.999999, g: 2.667307, b: 0.628272, a: 0}
     - Color_ACDAE28B: {r: 2, g: 0.2431373, b: 0, a: 0}
     - Color_D1B3DCEB: {r: 0, g: 0, b: 0, a: 0}
