@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 1040196017941457812}
   - component: {fileID: 4161430857793545265}
   - component: {fileID: 2172045744791539963}
+  - component: {fileID: 312053383008494205}
+  - component: {fileID: 1124907177835633751}
+  - component: {fileID: 1601801127523404923}
   m_Layer: 0
   m_Name: Muro1
   m_TagString: Untagged
@@ -79,3 +82,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &312053383008494205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370513879175622958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4178996, y: 5.0693693, z: 1.1150517}
+  m_Center: {x: -0.070251465, y: 2.5346851, z: -2.3175128}
+--- !u!65 &1124907177835633751
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370513879175622958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4178996, y: 5.0693693, z: 1.1573868}
+  m_Center: {x: -0.070251465, y: 2.5346851, z: 2.3030472}
+--- !u!65 &1601801127523404923
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370513879175622958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06740928, y: 5.0693693, z: 5.7500772}
+  m_Center: {x: -1.2454966, y: 2.5346851, z: 0}

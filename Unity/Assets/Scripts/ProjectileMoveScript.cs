@@ -7,12 +7,16 @@ public class ProjectileMoveScript : MonoBehaviour
     public float Speed;
     public GameObject Impactprefab;
     public List<GameObject> Trails;
+    public AudioClip FallAudio;
+    public bool AlreadyPlayed = false;
+    AudioSource audio;
 
     private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -23,6 +27,12 @@ public class ProjectileMoveScript : MonoBehaviour
         {
             rb.position += transform.forward * (Speed * Time.deltaTime);
         }
+
+            if(!AlreadyPlayed)
+            {
+                audio.PlayOneShot(FallAudio);
+                AlreadyPlayed = true;
+            }
     }
 
     void OnCollisionEnter(Collision collision) 

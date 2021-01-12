@@ -6,16 +6,19 @@ public class SpawnLapillusScript : MonoBehaviour
 {
     public GameObject Vfx;
     public Transform StartPoint;
-    public Transform EndPoint;
+    public Transform EndPoint;    
+    
     // Start is called before the first frame update
     void Start()
-    {
+    {        
         var startPos = StartPoint.position;
-        GameObject objVFX = Instantiate (Vfx, startPos, Quaternion.identity) as GameObject;
+        GameObject objVFX = Instantiate (Vfx, startPos, Quaternion.identity) as GameObject;        
 
         var endPos = EndPoint.position;
 
-        RotateTo (objVFX, endPos);        
+        RotateTo (objVFX, endPos); 
+
+        Destroy(gameObject, 3);       
     }
 
     void RotateTo (GameObject obj, Vector3 destination)

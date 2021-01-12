@@ -41,8 +41,13 @@
      <Compile Include="Assets\Scripts\ArrayMod1.cs" />
      <Compile Include="Assets\Scripts\ArrayModifier.cs" />
      <Compile Include="Assets\Scripts\Camera.cs" />
+     <Compile Include="Assets\Scripts\ImpactAudioScript.cs" />
+     <Compile Include="Assets\Scripts\LapilSpawnerScript.cs" />
      <Compile Include="Assets\Scripts\ProjectileMoveScript.cs" />
      <Compile Include="Assets\Scripts\SpawnLapillusScript.cs" />
+     <Compile Include="Assets\Scripts\TriggerStartVolcanoScript.cs" />
+     <Compile Include="Assets\Scripts\TriggerStopVolcanoScript.cs" />
+     <None Include="Assets\FREE Skyboxes - Terrestrial\Readme.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

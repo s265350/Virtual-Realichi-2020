@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3972326457574733063}
   - component: {fileID: 40341393774721698}
   - component: {fileID: 2840545414904499816}
+  - component: {fileID: 7400533575080833149}
   m_Layer: 0
   m_Name: ColonnaTempio
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &7400533575080833149
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4353671808546828221}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.81471
+  m_Height: 21.00057
+  m_Direction: 1
+  m_Center: {x: 0.0021275282, y: 10.500285, z: -0.002004087}
