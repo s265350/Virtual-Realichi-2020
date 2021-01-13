@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3593966737127525884}
   - component: {fileID: 454738363715502681}
   - component: {fileID: 2426166311870641811}
+  - component: {fileID: -5108896030655180657}
   m_Layer: 0
   m_Name: Scalini_forum
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-5108896030655180657
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4227619014278256454}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.895785, y: 0.26938105, z: 3.2018523}
+  m_Center: {x: 0, y: 0.13469052, z: 0}
