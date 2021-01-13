@@ -1,13 +1,2 @@
-[LI]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-
-# Unity3D generated meta files
-*.pidb.meta
-
-# Unity3D Generated File On Crash Reports
-sysinfo.txt
 
 .DS_Store
