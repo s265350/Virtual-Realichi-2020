@@ -65,10 +65,14 @@
   <ItemGroup>
     <Compile Include="Assets\Book-Page Curl\scripts\AutoFlip.cs" />
     <Compile Include="Assets\Book-Page Curl\scripts\Book.cs" />
+    <Compile Include="Assets\InteractionManager.cs" />
     <Compile Include="Assets\Scripts\ArrayMod1.cs" />
     <Compile Include="Assets\Scripts\ArrayModifier.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scripts\Character.cs" />
+    <Compile Include="Assets\Scripts\CharacterInteractable.cs" />
     <Compile Include="Assets\Scripts\ImpactAudioScript.cs" />
+    <Compile Include="Assets\Scripts\Interattivo.cs" />
     <Compile Include="Assets\Scripts\LapilSpawnerScript.cs" />
     <Compile Include="Assets\Scripts\Nav\FiniteStateMachine.cs" />
     <Compile Include="Assets\Scripts\Nav\NavAgent.cs" />
