@@ -11,7 +11,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: SlaveBody
-    second: {fileID: 2100000, guid: 9cde6c8370c72954b92a7ba698c1d79d, type: 2}
+    second: {fileID: 2100000, guid: 44cab1916727ad348aa7b34b81a2e2a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SlaveCloth
+    second: {fileID: 2100000, guid: 6c5afbe1d3f2c834bace552a53ad6a45, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

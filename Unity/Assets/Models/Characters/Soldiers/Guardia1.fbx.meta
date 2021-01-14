@@ -11,12 +11,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Dress_Guardia
-    second: {fileID: 2100000, guid: 8ad283d378b1c484da118c49fb78e6a0, type: 2}
+    second: {fileID: 2100000, guid: e17650c3d85f96147b9c9eb3c3f02543, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Skin_Guardia
-    second: {fileID: 2100000, guid: 7786c2ab1f90e2145a05796d682198d9, type: 2}
+    second: {fileID: 2100000, guid: 44cab1916727ad348aa7b34b81a2e2a3, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
