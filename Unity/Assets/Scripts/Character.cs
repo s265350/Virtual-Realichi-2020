@@ -32,10 +32,10 @@ public class Character : MonoBehaviour
 
     public void HighlightObject()
     {
-        foreach (Material mat in characterMaterials.materials)
-        {
-            mat.SetColor("_EmissionColor", highlightColor);
-        }
+        //foreach (Material mat in characterMaterials.materials)
+        //{
+        //    mat.SetColor("_EmissionColor", highlightColor);
+        //}
         //GetComponent<Renderer>().material.SetColor("_EmissionColor", highlightColor);
     }
 

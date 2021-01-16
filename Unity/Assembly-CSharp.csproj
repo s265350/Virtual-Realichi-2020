@@ -65,15 +65,18 @@
   <ItemGroup>
     <Compile Include="Assets\Book-Page Curl\scripts\AutoFlip.cs" />
     <Compile Include="Assets\Book-Page Curl\scripts\Book.cs" />
-    <Compile Include="Assets\InteractionManager.cs" />
     <Compile Include="Assets\Scripts\ArrayMod1.cs" />
     <Compile Include="Assets\Scripts\ArrayModifier.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\CharacterInteractable.cs" />
+    <Compile Include="Assets\Scripts\Codex.cs" />
+    <Compile Include="Assets\Scripts\CodexFlip.cs" />
     <Compile Include="Assets\Scripts\ImpactAudioScript.cs" />
+    <Compile Include="Assets\Scripts\InteractionManager.cs" />
     <Compile Include="Assets\Scripts\Interattivo.cs" />
     <Compile Include="Assets\Scripts\LapilSpawnerScript.cs" />
+    <Compile Include="Assets\Scripts\Mappa.cs" />
     <Compile Include="Assets\Scripts\Nav\FiniteStateMachine.cs" />
     <Compile Include="Assets\Scripts\Nav\NavAgent.cs" />
     <Compile Include="Assets\Scripts\Nav\NavAgentDog.cs" />
@@ -82,8 +85,11 @@
     <Compile Include="Assets\Scripts\Nav\NavSpawn.cs" />
     <Compile Include="Assets\Scripts\Nav\NavSpawner.cs" />
     <Compile Include="Assets\Scripts\Nav\NavTarget.cs" />
+    <Compile Include="Assets\Scripts\Obiettivi.cs" />
     <Compile Include="Assets\Scripts\ProjectileMoveScript.cs" />
+    <Compile Include="Assets\Scripts\ShowAgenda.cs" />
     <Compile Include="Assets\Scripts\SpawnLapillusScript.cs" />
+    <Compile Include="Assets\Scripts\SwitchWhatIsShowing.cs" />
     <Compile Include="Assets\Scripts\TriggerStartVolcanoScript.cs" />
     <Compile Include="Assets\Scripts\TriggerStopVolcanoScript.cs" />
     <None Include="Assets\FREE Skyboxes - Terrestrial\Readme.txt" />
