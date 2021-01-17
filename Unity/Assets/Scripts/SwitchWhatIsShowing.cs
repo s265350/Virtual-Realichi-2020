@@ -42,8 +42,10 @@ public class SwitchWhatIsShowing : MonoBehaviour
 
         if (indexAgenda == (int)agendaType.codex)
         {
+            mappa.GetComponent<Mappa>().enabled = false;
             mappa.GetComponent<Renderer>().enabled = false;
             obiettivi.GetComponent<Renderer>().enabled = false;
+            codex.GetComponent<CodexFlip>().enabled = true;
             for (int i = 0; i < 6; i++)
             {
                 codex.transform.GetChild(i).GetComponent<Renderer>().enabled = true;
@@ -51,8 +53,10 @@ public class SwitchWhatIsShowing : MonoBehaviour
         }
         else if (indexAgenda == (int)agendaType.mappa)
         {
+            mappa.GetComponent<Mappa>().enabled = true;
             mappa.GetComponent<MeshRenderer>().enabled = true;
             obiettivi.GetComponent<Renderer>().enabled = false;
+            codex.GetComponent<CodexFlip>().enabled = false;
             for (int i = 0; i < 6; i++)
             {
                 codex.transform.GetChild(i).GetComponent<Renderer>().enabled = false;
@@ -60,9 +64,11 @@ public class SwitchWhatIsShowing : MonoBehaviour
         }
         else
         {
+            mappa.GetComponent<Mappa>().enabled = false;
             mappa.GetComponent<Renderer>().enabled = false;
             obiettivi.GetComponent<Renderer>().enabled = true;
-            for (int i = 0; i < 5; i++)
+            codex.GetComponent<CodexFlip>().enabled = false;
+            for (int i = 0; i < 6; i++)
             {
                 codex.transform.GetChild(i).GetComponent<Renderer>().enabled = false;
             }
@@ -71,10 +77,12 @@ public class SwitchWhatIsShowing : MonoBehaviour
 
     private void OnDisable()
     {
+        codex.GetComponent<CodexFlip>().enabled = false;
         for (int i = 0; i < 6; i++)
         {
             codex.transform.GetChild(i).GetComponent<Renderer>().enabled = false;
         }
+        mappa.GetComponent<Mappa>().enabled = false;
         mappa.GetComponent<Renderer>().enabled = false;
         obiettivi.GetComponent<Renderer>().enabled = false;
     }

@@ -36,7 +36,6 @@ public class InteractionManager : MonoBehaviour
     {
         if (_pointingInteractable != null)
         {
-            _pointingInteractable.OriginalColor(gameObject);
             _eButton.enabled = false;
             _pointingInteractable = null;
         }

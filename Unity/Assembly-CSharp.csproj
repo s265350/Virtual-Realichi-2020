@@ -85,11 +85,13 @@
     <Compile Include="Assets\Scripts\Nav\NavSpawn.cs" />
     <Compile Include="Assets\Scripts\Nav\NavSpawner.cs" />
     <Compile Include="Assets\Scripts\Nav\NavTarget.cs" />
+    <Compile Include="Assets\Scripts\NobileMInteractable.cs" />
     <Compile Include="Assets\Scripts\Obiettivi.cs" />
     <Compile Include="Assets\Scripts\ProjectileMoveScript.cs" />
     <Compile Include="Assets\Scripts\ShowAgenda.cs" />
     <Compile Include="Assets\Scripts\SpawnLapillusScript.cs" />
     <Compile Include="Assets\Scripts\SwitchWhatIsShowing.cs" />
+    <Compile Include="Assets\Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\TriggerStartVolcanoScript.cs" />
     <Compile Include="Assets\Scripts\TriggerStopVolcanoScript.cs" />
     <None Include="Assets\FREE Skyboxes - Terrestrial\Readme.txt" />

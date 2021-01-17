@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class Mappa : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject _target;
+    private bool flashingIn = true;
+
+    private void OnEnable()
     {
+       StartCoroutine(flashingObject());
+    }
+
+    private IEnumerator flashingObject()
+    {
+        while (true)
+        {
+            yield return null;
+        }
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        StopAllCoroutines();
     }
 }

@@ -14,21 +14,18 @@ public class CodexFlip : MonoBehaviour
 
     public Texture _backgroundTexture;
 
-    //public List<int> _discoveredIndex;
 
     public int _currentPage = 0;
-    private Codex codex;
+    [SerializeField] private Codex codex;
 
 
     void Start()
     {
-        codex = GetComponent<Codex>();
         _agendaAnimator = GetComponent<Animator>();
-        //UpdateDiscovered(_discoveredIndex);
     }
     void OnEnable()
     {
-        if(codex) UpdateDiscovered(codex._discoveredIndex);
+        if(codex._discoveredIndex.Count > 0) UpdateDiscovered(codex._discoveredIndex);
     }
 
     void Update()

@@ -1,0 +1,10 @@
+- Mettere i sub
+- Recuperare audio da file system ( https://answers.unity.com/questions/37652/accessing-assets-from-code.html )
+- Lista spesa obiettivi: mostrare solo obiettivi quando sei uno schiavo
+- Cambio del personaggio: animazione + script
+- gestione tutorial: (3)pressione di E, (4)pressione di Tab, freccette su e giù,(2)muoversi con WASD, (1)guardarsi intorno col mouse, tasto esc per pausa (3 sec senza necessità di premere), obiettivi in alto a dx (brilla per un attimo)
+- Sblocco missioni + target che punta nel punto (?)
+- bloccare rotazione arrow
+- Menu di pausa
+- transizione tra scene (giorno - notte)
+- Soldi schiavo
