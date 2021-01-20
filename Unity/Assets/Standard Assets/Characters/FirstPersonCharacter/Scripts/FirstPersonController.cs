@@ -42,6 +42,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        private bool joystick;
 
         // Use this for initialization
         private void Start()
@@ -62,11 +63,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+            joystick = false;//Input.GetJoystickNames().Length > 0 ? true : false;
+
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
-            {
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+            {            
+                m_Jump = joystick ? CrossPlatformInputManager.GetButtonDown("AButton") : CrossPlatformInputManager.GetButtonDown("Space");
             }
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
@@ -205,15 +208,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void GetInput(out float speed)
         {
             // Read input
-            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+            float horizontal = joystick ? CrossPlatformInputManager.GetAxis("MoveHorizontal") : CrossPlatformInputManager.GetAxis("Horizontal");
+            float vertical = joystick ? CrossPlatformInputManager.GetAxis("MoveVertical") : CrossPlatformInputManager.GetAxis("Vertical");
 
             bool waswalking = m_IsWalking;
 
 #if !MOBILE_INPUT
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
-            m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+            m_IsWalking = joystick ? CrossPlatformInputManager.GetAxis("Run") != 0 ? false : true : !Input.GetKey(KeyCode.LeftShift);
 #endif
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
@@ -237,7 +240,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void RotateView()
         {
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
+            m_MouseLook.LookRotation (transform, m_Camera.transform, joystick);
         }
 
 
