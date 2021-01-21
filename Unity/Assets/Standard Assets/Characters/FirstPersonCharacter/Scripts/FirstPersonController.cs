@@ -42,7 +42,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
-        private bool joystick;
 
         // Use this for initialization
         private void Start()
@@ -63,14 +62,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            joystick = false;//Input.GetJoystickNames().Length > 0 ? true : false;
-
             RotateView();
+            Interact();
+            Agenda();
+            Escape();
+            Select();
+            Back();
+            Arrows();
             // the jump state needs to read here to make sure it is not missed
-            if (!m_Jump)
-            {            
-                m_Jump = joystick ? CrossPlatformInputManager.GetButtonDown("AButton") : CrossPlatformInputManager.GetButtonDown("Space");
-            }
+            /*if (!m_Jump)
+            {
+                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+            }*/
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
@@ -207,16 +210,38 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void GetInput(out float speed)
         {
-            // Read input
-            float horizontal = joystick ? CrossPlatformInputManager.GetAxis("MoveHorizontal") : CrossPlatformInputManager.GetAxis("Horizontal");
-            float vertical = joystick ? CrossPlatformInputManager.GetAxis("MoveVertical") : CrossPlatformInputManager.GetAxis("Vertical");
+            float horizontal;
+            float vertical;
+
+            // Read movement input
+            if(CrossPlatformInputManager.GetAxis("MoveHorizontal") != 0)    //joystick
+            {
+               horizontal = CrossPlatformInputManager.GetAxis("MoveHorizontal"); 
+            }                
+            else{                                                           //keyboard
+                horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+            }
+            if(CrossPlatformInputManager.GetAxis("MoveVertical") != 0){
+                vertical = CrossPlatformInputManager.GetAxis("MoveVertical");
+            }
+            else{
+                vertical = CrossPlatformInputManager.GetAxis("Vertical");
+            }
 
             bool waswalking = m_IsWalking;
 
 #if !MOBILE_INPUT
             // On standalone builds, walk/run speed is modified by a key press.
-            // keep track of whether or not the character is walking or running
-            m_IsWalking = joystick ? CrossPlatformInputManager.GetAxis("Run") != 0 ? false : true : !Input.GetKey(KeyCode.LeftShift);
+            // keep track of whether or not the character is walking or running                        
+            if(Input.GetKey(KeyCode.LeftShift))             //Keyboard
+            {
+                m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+            }
+            else                                            //Joystick
+            {
+                m_IsWalking = Input.GetAxis("Run") == 0 ? true : false;   
+            }
+            
 #endif
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
@@ -237,10 +262,82 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
+        private void Interact()
+        {
+            if(CrossPlatformInputManager.GetButtonDown("Interact"))
+            {
+                Debug.Log("Interact Triggered");
+            }
+        }
+
+        private void Agenda()
+        {
+            if(CrossPlatformInputManager.GetButtonDown("Agenda"))
+            {
+                Debug.Log("Agenda Triggered");
+            }
+        }
+
+        private void Escape()
+        {
+            if(CrossPlatformInputManager.GetButtonDown("Escape"))
+            {
+                Debug.Log("Escape Triggered");
+            }
+        }
+
+        private void Select()
+        {
+           if(CrossPlatformInputManager.GetButtonDown("Select"))
+            {
+                Debug.Log("Select Triggered");
+            } 
+        }
+
+        private void Back()
+        {
+           if(CrossPlatformInputManager.GetButtonDown("Back"))
+            {
+                Debug.Log("Back Triggered");
+            } 
+        }
+
+        private void Arrows()
+        {
+            float h;
+            float v;
+           if(CrossPlatformInputManager.GetAxis("Arrows_h")!=0)
+           {
+               h = CrossPlatformInputManager.GetAxis("Arrows_h");
+               Debug.Log("Arrows Horizontal: "+ h); 
+           }
+           else if(CrossPlatformInputManager.GetAxis("Arrows_v")!=0)
+           {   
+               v = CrossPlatformInputManager.GetAxis("Arrows_v");
+               Debug.Log("Arrows Vertical: "+ v);
+           }
+           else if(Input.GetKeyDown("left"))
+           {
+               Debug.Log("Arrow Left");
+           }
+           else if(Input.GetKeyDown("right"))
+           {
+               Debug.Log("Arrow Right");
+           }
+           else if(Input.GetKeyDown("down"))
+           {
+               Debug.Log("Arrow Down");
+           }
+           else if(Input.GetKeyDown("up"))
+           {
+               Debug.Log("Arrow Up");
+           }
+        }
+
 
         private void RotateView()
         {
-            m_MouseLook.LookRotation (transform, m_Camera.transform, joystick);
+            m_MouseLook.LookRotation (transform, m_Camera.transform);
         }
 
 

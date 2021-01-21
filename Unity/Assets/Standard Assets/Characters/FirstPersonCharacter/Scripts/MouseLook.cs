@@ -28,10 +28,24 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        public void LookRotation(Transform character, Transform camera, bool joystick)
+        public void LookRotation(Transform character, Transform camera)
         {
-            float yRot = joystick ? CrossPlatformInputManager.GetAxis("LookHorizontal") * XSensitivity : CrossPlatformInputManager.GetAxis("Mouse X") * XSensitivity;
-            float xRot = joystick ? CrossPlatformInputManager.GetAxis("LookVertical") * YSensitivity : CrossPlatformInputManager.GetAxis("Mouse Y") * YSensitivity;
+            float yRot;
+            float xRot;
+            // Read looking input
+            if(CrossPlatformInputManager.GetAxis("LookHorizontal") != 0)    //joystick
+            {
+                yRot = CrossPlatformInputManager.GetAxis("LookHorizontal") * YSensitivity; 
+            }                
+            else{                                                           //keyboard
+                yRot = CrossPlatformInputManager.GetAxis("Mouse X") * YSensitivity;
+            }
+            if(CrossPlatformInputManager.GetAxis("LookVertical") != 0){
+                xRot = CrossPlatformInputManager.GetAxis("LookVertical") * XSensitivity;
+            }
+            else{
+                xRot = CrossPlatformInputManager.GetAxis("Mouse Y") * XSensitivity;
+            }                        
 
             m_CharacterTargetRot *= Quaternion.Euler (0f, yRot, 0f);
             m_CameraTargetRot *= Quaternion.Euler (-xRot, 0f, 0f);
